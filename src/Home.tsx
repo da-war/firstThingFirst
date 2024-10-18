@@ -1,16 +1,15 @@
 import {
-  Button,
   StyleSheet,
   Text,
   TouchableOpacity,
-  View,
   useWindowDimensions,
+  View,
 } from 'react-native';
-import React from 'react';
+import React, {useState} from 'react';
 
-const App = () => {
-  const {width, height} = useWindowDimensions();
-  const [count, setCount] = React.useState<number>(0);
+const Home = () => {
+  const [count, setCount] = useState<number>(0);
+  const {width} = useWindowDimensions();
   return (
     <View
       style={{
@@ -27,7 +26,7 @@ const App = () => {
   );
 };
 
-export default App;
+export default Home;
 
 const styles = StyleSheet.create({
   btn: {
